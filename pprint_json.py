@@ -2,12 +2,17 @@ import json
 
 
 def load_data(filepath):
-    pass
-
+    f = open(filepath, "r")
+    filedata = f.read()
+    f.close()
+    return filedata
 
 def pretty_print_json(data):
-    pass
+    print(json.dumps(json.loads(data), sort_keys=True, indent=2, ensure_ascii = False))
 
 
 if __name__ == '__main__':
-    pass
+    data = load_data(input('Input a link: '))
+    pretty_print_json(data)
+
+
