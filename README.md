@@ -4,9 +4,9 @@
 
 # Quickstart
 
-Запустите файл pprint_json.py, затем при вопросе "Input a link:" вставьте путь к файлу с json. 
+Скрипт получает на вход из терминала строку, содержащую путь к файлу. 
 
-Example of script launch on Linux, Python 3.5:
+Пример работы скрипта на Linux, Python 3.5:
 
 ```bash
 
