@@ -1,10 +1,10 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Скрипт запрашивает строку с путём к файлу, где лежит json-строка, а затем выводит в читаемом виде.
 
 # Quickstart
 
-[TODO]
+Запустите файл pprint_json.py, затем при вопросе "Input a link:" вставьте путь к файлу с json. 
 
 Example of script launch on Linux, Python 3.5:
 
