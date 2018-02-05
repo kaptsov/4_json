@@ -11,7 +11,18 @@
 ```bash
 
 $ python pprint_json.py <path to file>
-# TODO add output example
+# [
+    {
+        "Cells": {
+            "Address": "улица Академика Павлова, дом 10",
+            "AdmArea": "Западный административный округ",
+            ...
+     },
+    "global_id": 14371450
+    },
+    "Id": "79742784-9ef3-4543-bc98-a219a8903c18",
+    "Number": 1
+},
 
 ```
 
