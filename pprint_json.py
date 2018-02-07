@@ -9,18 +9,25 @@ def load_data(filepath):
 
 
 def pretty_print_json(json_data):
-    print(json.dumps(
-                     json_data, sort_keys=True,
-                     indent=2, ensure_ascii=False
-    ))
+    print(
+        json.dumps(
+            json_data,
+            sort_keys=True,
+            indent=2,
+            ensure_ascii=False
+        )
+    )
 
 
-def commandline_parser():
+def commandline_parsing():
     parser = argparse.ArgumentParser(description='Get the link to json file.')
     parser.add_argument('filepath', type=str)
     return parser.parse_args()
 
 
 if __name__ == '__main__':
-    json_data = load_data(commandline_parser().filepath)
-pretty_print_json(json_data)
+    try:
+        json_data = load_data(commandline_parsing().filepath)
+        pretty_print_json(json_data)
+    except:
+        print('Wrong file structure or file missing.')
