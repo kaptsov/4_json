@@ -29,5 +29,5 @@ if __name__ == '__main__':
     try:
         json_data = load_data(commandline_parsing().filepath)
         pretty_print_json(json_data)
-    except:
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
         print('Wrong file structure or file missing.')
