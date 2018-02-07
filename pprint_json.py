@@ -15,12 +15,12 @@ def pretty_print_json(json_data):
     ))
 
 
-def commandline_link_parser():
+def commandline_parser():
     parser = argparse.ArgumentParser(description='Get the link to json file.')
     parser.add_argument('filepath', type=str)
     return parser.parse_args()
 
 
 if __name__ == '__main__':
-    json_data = load_data(commandline_link_parser().filepath)
+    json_data = load_data(commandline_parser().filepath)
 pretty_print_json(json_data)
