@@ -19,7 +19,7 @@ def pretty_print_json(json_data):
     )
 
 
-def commandline_parsing():
+def get_commandline_arguments():
     parser = argparse.ArgumentParser(description='Get the link to json file.')
     parser.add_argument('filepath', type=str)
     return parser.parse_args()
@@ -27,7 +27,7 @@ def commandline_parsing():
 
 if __name__ == '__main__':
     try:
-        json_data = load_data(commandline_parsing().filepath)
+        json_data = load_data(get_commandline_arguments().filepath)
         pretty_print_json(json_data)
     except (FileNotFoundError, json.decoder.JSONDecodeError):
         print('Wrong file structure or file missing.')
